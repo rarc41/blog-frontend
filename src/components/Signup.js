@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
-import Axios from "axios";
-import { api } from "../Helpers/auth-helpers";
+
 import Dialog from "@mui/material/Dialog";
 import globalContext from "../context/globalContext";
 import AppBarModal from "./common/AppBar}Modal";

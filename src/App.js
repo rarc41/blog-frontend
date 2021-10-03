@@ -4,7 +4,7 @@ import Axios from 'axios'
 
 // import Button from '@mui/material/Button'
 import {setToken, api, deleteToken, getToken, initAxiosInterceptors} from './Helpers/auth-helpers'
-import { ThemeProvider, styled } from "@mui/material/styles";
+import { ThemeProvider} from "@mui/material/styles";
 // import PersonIcon from '@mui/icons-material/Person';
 import { theme } from "./Theme";
 import Landing from "./components/Landing";
@@ -78,7 +78,7 @@ function App() {
 
   if(loadingUser) {
     return (
-      <Main>
+      <Main >
         <Loading></Loading>
       </Main>
     )
