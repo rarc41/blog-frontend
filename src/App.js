@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from "react";
 
 // import Button from '@mui/material/Button'
-import { ThemeProvider, styled} from '@mui/material/styles';
+import { ThemeProvider, styled } from "@mui/material/styles";
 // import PersonIcon from '@mui/icons-material/Person';
-import {theme} from './Theme'
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-
-
+import { theme } from "./Theme";
+import Landing from "./components/Landing";
+import GlobalState from "./context/globalState";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+// import Navbar from './components/common/Navbar';
+// import Main from './components/Main';
+// import Signup from './views/Signup';
 
 // const StyledButton = styled(Button)(({theme})=>({
 //   color: 'white',
@@ -18,16 +20,19 @@ import Main from './components/Main';
 //   }
 // }))
 
-
 function App() {
+  const [showLogin, setShowlogin] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
-      <Navbar/>
-      <Header/>
-      <Main></Main>
-    </div>
+      <GlobalState>
+        <div className="App">
+          {/* <Navbar/> */}
+          <Landing />
+          <Login></Login>
+          <Signup></Signup>
+        </div>
+      </GlobalState>
     </ThemeProvider>
   );
 }

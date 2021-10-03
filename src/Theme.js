@@ -16,5 +16,9 @@ export const theme = createTheme({
             dark: '#5daebd',
             contrastText:'black'
         }
+    },
+    typography: {
+        fontFamily: 'Poppins, sans-serif',
     }
+    
 })

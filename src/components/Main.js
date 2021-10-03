@@ -1,15 +1,14 @@
 import React from 'react';
+import '../styles/Main.css';
 
-const Main = () => {
+const Main = ({children, center}) => {
 
-    const categories={
-        id:1,
-        categoryName: 'Tech',
-    }
+    let classes = `Main ${center?'Main--center':''}`
+
     return (
-        <div>
-            
-        </div>
+        <main className={classes}>
+            {children}
+        </main>
     );
 };
 

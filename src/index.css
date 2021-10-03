@@ -30,3 +30,11 @@ h3 {
   /* color: var(--fuentePrincipal); */
   margin: 0;
 }
+
+main {
+  display: block;
+}
+
+.scroll{
+  height: 100%;
+}
