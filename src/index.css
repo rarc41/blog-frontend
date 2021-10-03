@@ -38,3 +38,68 @@ main {
 .scroll{
   height: 100%;
 }
+
+.Loading {
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+}
+.Loading > div {
+  width: 18px;
+  height: 18px;
+  background-color: var(--star-command-blue);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s ease-in-out infinite both;
+  animation: sk-bouncedelay 1.4s ease-in-out infinite both;
+}
+.Loading .Loading__dot-1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.Loading .Loading__dot-2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  to {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  to {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.Main {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.Main--center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
