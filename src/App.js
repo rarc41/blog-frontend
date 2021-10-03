@@ -31,7 +31,7 @@ function App() {
     const {data} = await Axios.post(`${api}/api/auth/login`, {email, password})
 
     setUser(data.user)
-    setToken(data.token)
+    setToken(data.access_token)
 
   }
 
@@ -40,7 +40,7 @@ function App() {
     const {data} = await Axios.post(`${api}/api/auth/register`, user)
 
     setUser(data.user)
-    setToken(data.token)
+    setToken(data.access_token)
 
   }
   
