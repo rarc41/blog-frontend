@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import Axios from 'axios'
+
 
 // import Button from '@mui/material/Button'
+import {setToken, api, deleteToken} from './Helpers/auth-helpers'
 import { ThemeProvider, styled } from "@mui/material/styles";
 // import PersonIcon from '@mui/icons-material/Person';
 import { theme } from "./Theme";
@@ -21,7 +24,30 @@ import Signup from "./components/Signup";
 // }))
 
 function App() {
-  const [showLogin, setShowlogin] = useState(false);
+
+  const [user, setUser] = useState(null)
+
+  const login = async (email, password) => {
+    const {data} = await Axios.post(`${api}/api/auth/login`, {email, password})
+
+    setUser(data.user)
+    setToken(data.token)
+
+  }
+
+  const signup = async (user) => {
+    console.log(user)
+    const {data} = await Axios.post(`${api}/api/auth/register`, user)
+
+    setUser(data.user)
+    setToken(data.token)
+
+  }
+  
+  const logout = async () => {
+    setUser(null)
+    deleteToken()
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -29,8 +55,8 @@ function App() {
         <div className="App">
           {/* <Navbar/> */}
           <Landing />
-          <Login></Login>
-          <Signup></Signup>
+          <Login login={login}></Login>
+          <Signup signup={signup}></Signup>
         </div>
       </GlobalState>
     </ThemeProvider>

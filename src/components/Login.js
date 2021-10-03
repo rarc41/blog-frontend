@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 
 
-const Login = ({ open }) => {
+const Login = ({ login }) => {
   const context = useContext(globalContext);
   const { modalLogin, showLoginForm } = context;
 
@@ -39,8 +39,7 @@ const Login = ({ open }) => {
       e.preventDefault();
 
       try {
-          const {data} = await Axios.post(`${api}/api/auth/login`, values)
-          console.log(data)
+        login(values.email, values.password);
       } catch (error) {
           console.log(error)
       }

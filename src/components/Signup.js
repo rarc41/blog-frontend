@@ -13,7 +13,7 @@ import {
   Button,
 } from "@mui/material";
 
-const Signup = () => {
+const Signup = ({signup}) => {
   const context = useContext(globalContext);
   const { modalSignup, showSignupForm } = context;
 
@@ -39,8 +39,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const { data } = await Axios.post(`${api}/api/auth/register`, values);
-      console.log(data);
+      signup(values)
     } catch (error) {
       console.log(error);
     }
