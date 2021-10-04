@@ -1,3 +1,10 @@
+# About this app
+
+Aun falta integrar las funcionalidades de edicion de posts por el momento las funcionalidades con las que cuenta son: consulta de todos los posts, autenticacion de usuario (Login y Signup), persistencia de la sesion del usuarion en el localstorage del navegador gracias a la implementacion del JWT, la funcion logout, puedes logearte con estos datos: admin2@admin.com - password, o bien puedes completar el formulario de registro, que por el momento permite el acceso a las entradas de blog
+
+el UI fue desarrollado con css y la libreria material UI
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
