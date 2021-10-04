@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Navbar = () => {
+const Navbar = ({logout}) => {
     const user = {
 
       };
@@ -36,18 +36,12 @@ const Navbar = () => {
           ) : (
               <Fragment>
             <Button
-              color="secondary"
-              variant="outlined"
-              sx={{ fontSize: "1.5rem" }}
-            >
-              Login
-            </Button>
-            <Button
             color="secondary"
             variant="contained"
             sx={{ fontSize: "1.5rem", marginLeft:'2rem' }}
+            onClick={()=>logout()}
           >
-            Sign Up
+            Log Out
           </Button>
           </Fragment>
           )}

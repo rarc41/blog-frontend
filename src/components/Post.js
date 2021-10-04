@@ -3,13 +3,7 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 
 import {
-  DialogContent,
-  TextField,
-  Box,
-  FormControl,
-  DialogActions,
-  Button,
-  Paper,
+
   Grid,
   Card,
   CardHeader,
@@ -44,7 +38,7 @@ const Post = ({ post }) => {
     setExpanded(!expanded);
   };
   console.log(post);
-  const { id, title, content, tags, likes, user, created_at, description, img_url, slug } =
+  const { title, content, user, created_at, description, img_url, slug } =
     post;
   return (
     <Grid item xs={12} md={6}>
