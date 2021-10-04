@@ -104,3 +104,27 @@ main {
   -webkit-justify-content: center;
   justify-content: center;
 }
+
+.List-Posts{
+  height: 100%;
+  width: 75%;
+  display: flex;
+  padding: 3rem;
+  background: rgb(0, 119, 182);
+  background: linear-gradient(
+    232deg,
+    rgba(0, 119, 182, 1) 23%,
+    rgba(0, 180, 216, 1) 62%
+  );
+  overflow-y: scroll;
+}
+
+.Other-Posts{
+  background: rgb(122,185,196);
+background: linear-gradient(232deg, rgba(122,185,196,1) 40%, rgba(202,240,248,1) 77%);
+}
+
+.Card-container{
+  height: 100%;
+  /* width: 100%; */
+}
